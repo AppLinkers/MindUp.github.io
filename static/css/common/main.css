@@ -1,0 +1,30 @@
+.main__container {
+    position: relative;
+}
+
+img {
+    position: absolute;
+    border-radius: 0;
+}
+
+.container-upper {
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+    bottom: 0;
+}
+
+.container-bottom {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    color: var(--color-white);
+}
+
+p.info {
+    font-weight: 300;
+}
+
+.button-container {
+    margin-top: 40px;
+}

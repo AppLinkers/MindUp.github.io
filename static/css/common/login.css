@@ -1,0 +1,50 @@
+.logo {
+    margin-top: var(--margin-top);
+    margin-bottom: 50px;
+}
+
+input.last-child {
+    margin-bottom: 0;
+}
+
+
+section#sign_up {
+    padding-bottom: 60px;
+}
+
+.select__container {
+    margin-bottom: var(--margin-input);
+    position: relative;
+}
+
+.select__container i {
+    position: absolute;
+    font-size: 25px;
+    top: 17%;
+    right: 3%;
+}
+
+.form__container {
+    display: none;
+}
+
+.terms {
+    margin-top: 30px;
+}
+
+.terms input {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    accent-color: var(--color-primary);
+}
+
+.terms p {
+    margin-bottom: 0;
+    margin-left: 14px;
+    font-weight: 600;
+}
+
+.terms p a {
+    text-decoration: underline;
+}
