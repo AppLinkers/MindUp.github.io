@@ -18,8 +18,8 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <!-- STYLE SHEET -->
-    <link rel="stylesheet" href="/static/css/common/style.css">
-    <link rel="stylesheet" href="/static/css/common/login.css">
+    <link rel="stylesheet" href="../../static/css/common/style.css">
+    <link rel="stylesheet" href="../../static/css/common/login.css">
 </head>
 
 <body>
@@ -29,7 +29,7 @@
             <a th:href="@{/}">
                 <p class="logo eng">MIND UP</p>
             </a>
-            <form action="/templates/player/profile.html" th:action="@{/login_proc}" th:method="post"
+            <form action="../player/profile.html" th:action="@{/login_proc}" th:method="post"
                 th:object="${userLoginReq}">
                 <div class="form__container flex-column" style="display: block;">
                     <p class="input-label">아이디</p>
