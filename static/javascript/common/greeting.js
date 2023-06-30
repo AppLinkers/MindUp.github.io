@@ -5,7 +5,7 @@ const endText = ["보내세요!", "보내고 계신가요?"];
 
 const currentHour = new Date().getHours();
 
-greeting.innerHTML = makeGreetingText();
+greeting.innerHTML = greeting.innerHTML.concat("님, ").concat(makeGreetingText());
 
 function makeGreetingText() {
     const greetingList = [

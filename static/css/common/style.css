@@ -44,7 +44,7 @@
 
     --image-size-round: 60px;
 
-    --margin-top: 40px;
+    --margin-top: 25px;
     --margin-label: 10px;
     --margin-input: 30px;
 
@@ -58,6 +58,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -212,7 +213,7 @@ button {
 }
 
 .btn-bottom__container {
-    padding-bottom: 40px;
+    padding-bottom: 30px;
 }
 
 input {
