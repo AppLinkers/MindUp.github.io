@@ -20,6 +20,7 @@
     <!-- STYLE SHEET -->
     <link rel="stylesheet" href="../../static/css/common/style.css">
     <link rel="stylesheet" href="../../static/css/common/profile_edit.css">
+
 </head>
 
 <body>
@@ -32,13 +33,14 @@
             <!-- 프로필 이미지 -->
             <div class="profile-img__container flex-center">
                 <img class="profile-img" src="../../static/images/son.jpg">
+                <p class="font20">손흥민</p>
                 <a class="font14 pick-image" onclick="changeImage()">변경하기</a>
                 <input id="selectImg" type="file" hidden>
             </div>
             <!-- 정보 변경 -->
             <form action="#">
                 <div class="form__container">
-                    <p class="input-label">다음 경기 날짜</p>
+                    <p class="input-label match-date">다음 경기 날짜</p>
                     <input id="selectDate" type="date">
                     <p class="input-label">소속팀</p>
                     <input type="text" placeholder="팀 코드를 입력하세요">
@@ -55,6 +57,7 @@
 
     <script src="../../static/javascript/common/base.js"></script>
     <script src="../../static/javascript/common/profile_edit.js"></script>
+    <script src="../../static/javascript/player/date_select.js"></script>
 
 </body>
 
