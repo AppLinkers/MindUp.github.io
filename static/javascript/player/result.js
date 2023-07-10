@@ -31,8 +31,28 @@ const avgByPositionData = [4, 4, 4, 4, 4, 4, 4, 4, 4];
 const compareAgeData = mergeArraysByIndex(myAvgData, avgByAgeData);
 const comparePositionData = mergeArraysByIndex(myAvgData, avgByPositionData);
 
-const monthData = [2.3, 4.5, 3.7, 2.5, 3.8, 3.6];
-const dayData = [2.8, 3.3, 2.5, 3.9];
+const monthData = [
+    [2.3, 4.5, 3.7, 2.5, 3.8, 3.6],
+    [3.1, 2.4, 5.0, 1.7, 2.2, 3.8],
+    [4.3, 2.5, 1.7, 3.5, 2.8, 4.6],
+    [2.3, 4.5, 3.7, 2.5, 3.8, 3.6],
+    [3.1, 2.4, 5.0, 1.7, 2.2, 3.8],
+    [4.3, 2.5, 1.7, 3.5, 2.8, 4.6],
+    [2.3, 4.5, 3.7, 2.5, 3.8, 3.6],
+    [3.1, 2.4, 5.0, 1.7, 2.2, 3.8],
+    [4.3, 2.5, 1.7, 3.5, 2.8, 4.6],
+];
+const dayData = [
+    [2.8, 3.3, 2.5, 3.9],
+    [4.8, 2.3, 1.5, 2.9],
+    [3.8, 2.3, 4.5, 4.9],
+    [2.8, 3.3, 2.5, 3.9],
+    [4.8, 2.3, 1.5, 2.9],
+    [3.8, 2.3, 4.5, 4.9],
+    [2.8, 3.3, 2.5, 3.9],
+    [4.8, 2.3, 1.5, 2.9],
+    [3.8, 2.3, 4.5, 4.9],
+];
 
 function calculateAverageForEachIndex(data) {
     var averages = data.map(function (numbers) {
@@ -172,9 +192,9 @@ const myDatasets = {
     label: '내 심리상태',
     data: myAvgData,
     fill: true,
-    backgroundColor: 'rgba(255,228,0,0.2)',
-    borderColor: '#FFE400',
-    borderWidth: 1
+    backgroundColor: 'rgba(101, 39, 190, 0.3)',
+    borderColor: '#6527BE',
+    borderWidth: 2
 };
 
 //////////////////// 평균 차트 (나이, 포지션) //////////////////////
@@ -184,8 +204,8 @@ function makeAvgDatasets(labelText, data) {
         data: data,
         fill: false,
         backgroundColor: 'white',
-        borderColor: 'blue',
-        borderWidth: 2
+        borderColor: '#F86F03',
+        borderWidth: 3
     };
 };
 
@@ -265,6 +285,13 @@ const data_byMonth = {
 const data_byDay = {
     labels: dayLabels,
     datasets: [makeDateDatasets(dayData)]
+};
+
+function makeDateData(labels, datasets) {
+    return {
+        labels: labels,
+        datasets: [datasets]
+    };
 };
 
 //////////////////// 유형별 차트 //////////////////////
