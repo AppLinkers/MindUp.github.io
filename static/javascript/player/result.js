@@ -432,8 +432,7 @@ const config_radar = {
         },
         plugins: {
             legend: {
-                display: true,
-                position: 'bottom'
+                display: false,
             },
         },
 
@@ -491,6 +490,8 @@ for (var i = 0; i < myData.length; i++) {
 const averageFilter = document.getElementById("average-filter");
 const dateFilter = document.getElementById("date-filter");
 
+const radarLabels = document.querySelectorAll(".radar-label");
+
 function avgFilterChange() {
 
     var selected = averageFilter.options[averageFilter.selectedIndex].value;
@@ -500,14 +501,20 @@ function avgFilterChange() {
     if (selected === "byAge") {
         config_radar.data = data_byAge;
         updateTypeDetailCharts(0);
+        radarLabels[1].classList.add("active");
+        radarLabels[2].classList.remove("active");
     }
     if (selected === "byPosition") {
         config_radar.data = data_byPosition;
         updateTypeDetailCharts(1);
+        radarLabels[1].classList.remove("active");
+        radarLabels[2].classList.add("active");
     }
     if (selected === "myAvg") {
         config_radar.data = data_myAvg;
         typeDetailContainer.classList.remove("show");
+        radarLabels[1].classList.remove("active");
+        radarLabels[2].classList.remove("active");
     }
     avgChart.update();
 }
