@@ -150,10 +150,10 @@ typeFilters.forEach((typeFilter, idx) => {
 function makeDateDatasets(data) {
     return {
         data: data,
-        borderColor: '#FFE400',
+        borderColor: '#000000',
         borderWidth: 1,
         pointRadius: 5,
-        pointBackgroundColor: '#FFE400',
+        pointBackgroundColor: '#000000',
     };
 };
 
@@ -264,8 +264,8 @@ const myDatasets = {
     label: '내 심리상태',
     data: myAvgData,
     fill: true,
-    backgroundColor: 'rgba(101, 39, 190, 0.3)',
-    borderColor: '#6527BE',
+    backgroundColor: 'rgba(103, 163, 210, 0.4)',
+    borderColor: '#67A3D2',
     borderWidth: 2
 };
 
@@ -274,10 +274,10 @@ function makeAvgDatasets(labelText, data) {
     return {
         label: labelText,
         data: data,
-        fill: false,
-        backgroundColor: 'white',
-        borderColor: '#F86F03',
-        borderWidth: 3
+        fill: true,
+        backgroundColor: 'rgba(206, 108, 106, 0.4)',
+        borderColor: '#CE6C6A',
+        borderWidth: 2
     };
 };
 
@@ -412,7 +412,7 @@ const config_radar = {
                 angleLines: {
                     display: false
                 },
-                suggestedMin: 1,
+                suggestedMin: 0,
                 suggestedMax: 5,
                 ticks: {
                     beginAtZero: true,
