@@ -20,7 +20,7 @@ tabs.forEach((tab, idx) => {
 
 });
 
-const typeLabels = ["경기력", "불안감", "훈련", "기능 자신감", "부상", "관계", "진로", "학업", "생활"];
+const typeLabels = ["경기력", "불안감", "훈련", "기능자신감", "부상", "관계", "진로", "학업", "생활"];
 const teamData = [4, 4, 4, 3, 2, 1, 2, 2, 3];
 
 const data_radar = {
@@ -28,9 +28,9 @@ const data_radar = {
     datasets: [{
         data: teamData,
         fill: true,
-        backgroundColor: 'rgba(255,228,0,0.2)',
-        borderColor: '#FFE400',
-        borderWidth: 1
+        backgroundColor: 'rgba(103, 163, 210, 0.4)',
+        borderColor: '#67A3D2',
+        borderWidth: 2
     }]
 }
 
@@ -43,22 +43,22 @@ const config_radar = {
                 borderWidth: 4
             },
             point: {
-                radius: 0,
+                radius: 2,
             }
         },
         scales: {
             r: {
                 angleLines: {
-                    display: false
+                    display: true
                 },
-                suggestedMin: 1,
+                suggestedMin: 0,
                 suggestedMax: 5,
                 ticks: {
                     beginAtZero: true,
                     stepSize: 1,
                     callback: function (value) {
                         return Math.round(value);
-                    }
+                    },
                 },
                 pointLabels: {
                     font: {
@@ -76,7 +76,7 @@ const config_radar = {
         },
 
     }
-}
+};
 
 new Chart(
     document.getElementById('chart'),
