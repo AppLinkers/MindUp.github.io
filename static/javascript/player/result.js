@@ -355,8 +355,8 @@ function makeTypeDatasets(data) {
     return {
         label: '심리 상태',
         data: data,
-        backgroundColor: makeTypeDataColor(data, '#CDF3E6', '#F5ECD7', '#FFE2DC'),
-        borderColor: makeTypeDataColor(data, '#1DBA84', '#EFB93A', '#FC5230'),
+        backgroundColor: makeTypeDataColor(data, '#CDF3E6', '#F5ECD7', '#f8c4ba'),
+        borderColor: makeTypeDataColor(data, '#1DBA84', '#EFB93A', '#F94B28'),
         borderWidth: 1
     };
 };
