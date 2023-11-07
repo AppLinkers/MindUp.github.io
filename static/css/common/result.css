@@ -1,279 +1,301 @@
 /* 헤더 선수 정보 */
 .result-header__container {
-    height: 120px;
-    background-color: var(--color-gray100);
+  height: 120px;
+  background-color: var(--color-gray100);
 }
 
 img.profile {
-    width: 80px;
-    height: 80px;
-    border-radius: 40px;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
 }
 
 .header-info .font20 {
-    font-weight: bold;
-    margin-top: 3px;
+  font-weight: bold;
+  margin-top: 3px;
 }
 
 .header-info .font12 {
-    color: var(--color-gray200);
+  color: var(--color-gray200);
 }
 
 .date {
-    margin-top: 2px;
+  margin-top: 2px;
 }
 
 .date .font10 {
-    color: var(--color-gray300);
-    margin-right: 6px;
+  color: var(--color-gray300);
+  margin-right: 6px;
 }
 
 /* 선수 상세 정보 */
 .result-info__container {
-    padding: 20px 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 40px;
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
 }
 
 .result-info__container .font16 {
-    font-weight: bold;
-    margin-bottom: 30px;
+  font-weight: bold;
+  margin-bottom: 30px;
 }
 
 .info-box {
-    margin-bottom: 28px;
+  margin-bottom: 28px;
 }
 
 .info-label {
-    color: var(--color-gray300);
+  color: var(--color-gray300);
 }
 
 .info-score-box .font12 {
-    color: var(--color-gray300);
-    margin-top: 8px;
+  color: var(--color-gray300);
+  margin-top: 8px;
 }
 
 .info-score {
-    width: 90px;
-    height: 90px;
-    border-radius: 50px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50px;
 }
 
 .info-score p {
-    color: var(--color-white);
-    font-weight: 500;
+  color: var(--color-white);
+  font-weight: 500;
 }
 
 /* DIVIDER */
 .divider {
-    background-color: var(--color-gray100);
-    height: 5px;
+  background-color: var(--color-gray100);
+  height: 5px;
 }
 
 /* 선수 차트 */
 .result-chart__container {
-    padding: 20px 0;
+  padding: 20px 0;
 }
 
 .chart-tab p {
-    font-weight: bold;
-    margin-right: 15px;
-    color: var(--color-gray200);
-    cursor: pointer;
-    transition: var(--transition);
+  font-weight: bold;
+  margin-right: 15px;
+  color: var(--color-gray200);
+  cursor: pointer;
+  transition: var(--transition);
 }
 
 .chart-tab p.active {
-    color: var(--color-black);
+  color: var(--color-black);
 }
 
 .filter-box {
-    position: relative;
-    display: none;
+  position: relative;
+  display: none;
 }
 
 .filter-box.active {
-    display: block;
+  display: block;
 }
 
 .filter-box i {
-    position: absolute;
-    font-size: 25px;
-    top: -2%;
-    right: 3%;
+  position: absolute;
+  font-size: 25px;
+  top: -2%;
+  right: 3%;
 }
 
 select {
-    width: 140px;
-    padding: 10px;
-    font-size: var(--font14);
+  width: 140px;
+  padding: 10px;
+  font-size: var(--font14);
 }
 
 .canvas__container {
-    display: none;
+  display: none;
 }
 
 .canvas__container.active {
-    display: block;
+  display: block;
 }
 
 canvas#chart-radar {
-    z-index: 2;
+  z-index: 2;
 }
 
 canvas#chart-line {
-    margin-top: 45px;
+  margin-top: 45px;
 }
 
 .type-detail__container {
-    margin: 40px 0 20px 0;
-    display: none;
+  margin: 40px 0 20px 0;
+  display: none;
 }
 
 .type-detail__container i {
-    transition: var(--transition);
+  transition: var(--transition);
 }
 
 .type-detail__container.active.show {
-    display: block;
+  display: block;
 }
 
 .type-detail__container i.active {
-    -webkit-transform: rotate(-180deg);
-    -moz-transform: rotate(-180deg);
-    -ms-transform: rotate(-180deg);
-    -o-transform: rotate(-180deg);
-    transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
 }
 
 .type-detail-header {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .type-detail-body {
-    display: none;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 20px;
-    row-gap: 30px;
-    margin-top: 30px;
+  display: none;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 30px;
+  margin-top: 30px;
 }
 
 .type-detail-body.active {
-    display: grid;
+  display: grid;
 }
 
 .type-filter__container {
-    margin-top: 35px;
-    display: none;
-    grid-template-columns: 1fr repeat(2, 1fr);
-    column-gap: 20px;
-    row-gap: 10px;
+  margin-top: 35px;
+  display: none;
+  grid-template-columns: 1fr repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 10px;
 }
 
 .type-filter__container.active {
-    display: grid;
+  display: grid;
 }
 
 .type-filter {
-    width: 100%;
-    padding: 10px 0;
-    border: 1px solid var(--color-dark);
-    border-radius: var(--input-radius);
-    color: var(--color-dark);
-    cursor: pointer;
-    transition: var(--transition);
+  width: 100%;
+  padding: 10px 0;
+  border: 1px solid var(--color-dark);
+  border-radius: var(--input-radius);
+  color: var(--color-dark);
+  cursor: pointer;
+  transition: var(--transition);
 }
 
 .type-filter.large {
-    grid-column: 1 / span 3;
+  grid-column: 1 / span 3;
 }
 
 .type-filter.active {
-    color: var(--color-orange);
-    background-color: var(--color-lightOrange);
-    border: 1px solid var(--color-orange);
+  color: var(--color-orange);
+  background-color: var(--color-lightOrange);
+  border: 1px solid var(--color-orange);
 }
 
 /* 유형별 차트 */
 .type-chart__container {
-    padding: 30px 0;
+  padding: 30px 0;
 }
 
 .color {
-    width: 15px;
-    height: 15px;
-    border-radius: 10px;
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
 }
 
 .green {
-    background-color: var(--color-green);
+  background-color: var(--color-green);
 }
 
 .yellow {
-    background-color: var(--color-yellow);
+  background-color: var(--color-yellow);
 }
 
 .red {
-    background-color: var(--color-red);
+  background-color: var(--color-red);
 }
 
 .type-color p {
-    margin-left: 5px;
-    margin-right: 20px;
+  margin-left: 5px;
+  margin-right: 20px;
 }
 
 .type-color p:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .type-chart-list {
-    margin-top: 42px;
+  margin-top: 42px;
 }
 
 .type-chart-item {
-    padding: 17px 14px 14px 14px;
-    border: 1px solid var(--color-gray200);
-    border-radius: var(--input-radius);
-    margin-bottom: 15px;
-    cursor: pointer;
+  padding: 17px 14px 14px 14px;
+  border: 1px solid var(--color-gray200);
+  border-radius: var(--input-radius);
+  margin-bottom: 15px;
+  cursor: pointer;
 }
 
 .type-chart-item.active .item-chart {
-    display: block;
+  display: block;
 }
 
 .item-info .font18 {
-    margin-right: 10px;
-    margin-bottom: 5px;
+  margin-right: 10px;
+  margin-bottom: 5px;
 }
 
 .item-info .item-update-date {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
 .item-info .item-average {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
 .item-info .status {
-    margin-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 .item-info i {
-    font-size: 30px;
-    transition: var(--transition);
+  font-size: 30px;
+  transition: var(--transition);
 }
 
 .item-info i.active {
-    -webkit-transform: rotate(-180deg);
-    -moz-transform: rotate(-180deg);
-    -ms-transform: rotate(-180deg);
-    -o-transform: rotate(-180deg);
-    transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
 }
 
 .item-chart {
-    display: none;
-    margin-top: 20px;
+  display: none;
+  margin-top: 20px;
+}
+
+.worst-list__container {
+  margin-top: 20px;
+}
+
+.worst-list {
+  margin-top: 13px;
+}
+
+.worst-list-label {
+  color: var(--color-gray300);
+  font-weight: bold;
+}
+
+.worst-list-item {
+  padding: 12px 18px;
+  border-top: 1px solid var(--color-gray200);
+}
+
+.worst-list-item:nth-of-type(even) {
+  background-color: var(--color-gray100);
 }
