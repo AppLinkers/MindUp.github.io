@@ -51,29 +51,10 @@
       };
 
       document.addEventListener("DOMContentLoaded", function () {
-        const calendarEl = document.getElementById("calendar-team");
-        const calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: "dayGridMonth",
-          locale: "ko",
-          headerToolbar: {
-            start: "title",
-            center: "",
-            end: "prev,next",
-          },
-          dateClick: function (info) {
-            const dateEl = document.getElementById("date");
-            let dateString = info.dateStr;
-            dateEl.innerText = isToday(dateString)
-              ? "오늘"
-              : formatDate(dateString);
-          },
-        });
-        calendar.render();
-      });
+        const dateEl = document.getElementById("date");
 
-      document.addEventListener("DOMContentLoaded", function () {
-        const calendarEl = document.getElementById("calendar-personal");
-        const calendar = new FullCalendar.Calendar(calendarEl, {
+        const teamCalendarEl = document.getElementById("calendar-team");
+        const teamCalendar = new FullCalendar.Calendar(teamCalendarEl, {
           initialView: "dayGridMonth",
           locale: "ko",
           headerToolbar: {
@@ -82,14 +63,31 @@
             end: "prev,next",
           },
           dateClick: function (info) {
-            const dateEl = document.getElementById("date");
             let dateString = info.dateStr;
             dateEl.innerText = isToday(dateString)
               ? "오늘"
               : formatDate(dateString);
           },
         });
-        calendar.render();
+        teamCalendar.render();
+
+        const personalCalendarEl = document.getElementById("calendar-personal");
+        const personalCalendar = new FullCalendar.Calendar(personalCalendarEl, {
+          initialView: "dayGridMonth",
+          locale: "ko",
+          headerToolbar: {
+            start: "title",
+            center: "",
+            end: "prev,next",
+          },
+          dateClick: function (info) {
+            let dateString = info.dateStr;
+            dateEl.innerText = isToday(dateString)
+              ? "오늘"
+              : formatDate(dateString);
+          },
+        });
+        personalCalendar.render();
       });
     </script>
   </head>
@@ -125,8 +123,8 @@
             <p class="font16 active">팀 선수</p>
             <p class="font16">개인 선수</p>
           </div>
-          <div id="calendar-team"></div>
-          <div id="calendar-personal"></div>
+          <div id="calendar-team" class="calendar active"></div>
+          <div id="calendar-personal" class="calendar"></div>
         </div>
         <!-- 날짜별 선수 리스트 -->
         <div class="player_list">
